@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>escritores contemporáneos</title>
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --panel:#ffffff;
+      --txt:#111827;
+      --muted:#6b7280;
+      --line:rgba(17,24,39,.12);
+      --shadow: 0 12px 30px rgba(17,24,39,.10);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% 0%, rgba(59,130,246,.10) 0%, rgba(59,130,246,0) 55%),
+        radial-gradient(1000px 700px at 85% 10%, rgba(168,85,247,.10) 0%, rgba(168,85,247,0) 55%),
+        var(--bg);
+      color:var(--txt);
+    }
+    .wrap{max-width:1200px;margin:0 auto;padding:28px 18px 46px}
+    header{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+      padding:18px 18px 10px;
+      background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.55));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    h1{margin:0;font-size: clamp(22px, 2.4vw, 34px);letter-spacing:.2px;text-transform:lowercase}
+    .hint{margin:0;color:var(--muted);font-size:14px}
+
+    /* galería fija: 4 por fila SIEMPRE */
+    .gallery{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap:16px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      transform: translateZ(0);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+      min-width:0;
+    }
+    .card:hover{
+      transform: translateY(-3px) scale(1.01);
+      border-color: rgba(59,130,246,.35);
+      box-shadow: 0 16px 38px rgba(17,24,39,.14);
+    }
+    .thumb{position:relative;width:100%;aspect-ratio:16/9;background: rgba(17,24,39,.04);overflow:hidden}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .meta{padding:12px 12px 14px}
+    .title{margin:0;font-size:14px;line-height:1.2;color:var(--txt);text-transform:lowercase}
+    a{color:inherit;text-decoration:none}
+    .badge{
+      display:inline-block;margin-top:8px;padding:4px 8px;border-radius:999px;font-size:12px;
+      color:var(--muted);border:1px solid rgba(17,24,39,.12);background: rgba(17,24,39,.03);
+      word-break:break-word;
+    }
+
+    /* si la pantalla es estrecha, mantener 4 por fila con scroll horizontal */
+    @media (max-width: 520px){
+      .wrap{padding:18px 12px 34px}
+      .gallery{overflow-x:auto;padding-bottom:8px}
+      .card{min-width:220px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>escritores contemporáneos</h1>
+
+      </div>
+      <p class="hint">archivo: <strong>index.html</strong></p>
+    </header>
+
+    <section class="gallery" aria-label="galería">
+<article class="card">
+        <a href="01-federico-garcia-lorca-el-poeta-que-amo-las-estrellas.html">
+          <div class="thumb"><img src="01-poeta-en-nueva-york.jpg" alt="01 poeta en nueva york"></div>
+          <div class="meta">
+            <p class="title">01 poeta en nueva york</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="02-miguel-de-unamuno-la-lucha-por-el-ser-y-la-existencia.html">
+          <div class="thumb"><img src="02-miguel-de-unamuno.jpg" alt="02 miguel de unamuno"></div>
+          <div class="meta">
+            <p class="title">02 miguel de unamuno</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="03-antonio-machado-el-poeta-de-la-melancolia-y-la-tierra.html">
+          <div class="thumb"><img src="03-antonio-machado.jpg" alt="03 antonio machado"></div>
+          <div class="meta">
+            <p class="title">03 antonio machado</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="04-vicente-aleixandre-el-poeta-del-cosmos-y-la-intimidad.html">
+          <div class="thumb"><img src="04-vicente-aleixandre.jpg" alt="04 vicente aleixandre"></div>
+          <div class="meta">
+            <p class="title">04 vicente aleixandre</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="05-juan-ramon-jimenez-el-poeta-de-la-plenitud-y-la-belleza.html">
+          <div class="thumb"><img src="05-juan-ramon-jimenez.jpg" alt="05 juan ramón jiménez"></div>
+          <div class="meta">
+            <p class="title">05 juan ramón jiménez</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="06-camilo-jose-cela-el-cronista-de-la-espana-profunda.html">
+          <div class="thumb"><img src="06-camilo-jose-cela.jpg" alt="06 camilo josé cela"></div>
+          <div class="meta">
+            <p class="title">06 camilo josé cela</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="07-carmen-laforet-la-voz-de-una-nueva-generacion.html">
+          <div class="thumb"><img src="07-carmen-laforet.jpg" alt="07 carmen laforet"></div>
+          <div class="meta">
+            <p class="title">07 carmen laforet</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="08-ana-maria-matute-la-voz-de-la-infancia-y-la-fantasia.html">
+          <div class="thumb"><img src="08-ana-maria-matute.jpg" alt="08 ana maría matute"></div>
+          <div class="meta">
+            <p class="title">08 ana maría matute</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="09-max-aub-el-cronista-del-exilio-y-la-memoria.html">
+          <div class="thumb"><img src="09-max-aub.jpg" alt="09 max aub"></div>
+          <div class="meta">
+            <p class="title">09 max aub</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="10-luis-cernuda-el-poeta-del-exilio-y-el-deseo.html">
+          <div class="thumb"><img src="10-luis-cernuda.jpg" alt="10 luis cernuda"></div>
+          <div class="meta">
+            <p class="title">10 luis cernuda</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="11-rafael-alberti-el-poeta-del-mar-y-la-memoria.html">
+          <div class="thumb"><img src="11-rafael-alberti.jpg" alt="11 rafael alberti"></div>
+          <div class="meta">
+            <p class="title">11 rafael alberti</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="12-ramon-gomez-de-la-serna-el-maestro-de-las-greguerias.html">
+          <div class="thumb"><img src="12-ramon-gomez-de-la-serna.jpg" alt="12 ramón gómez de la serna"></div>
+          <div class="meta">
+            <p class="title">12 ramón gómez de la serna</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="13-damaso-alonso-el-poeta-de-la-luz-y-las-sombras.html">
+          <div class="thumb"><img src="13-damaso-alonso.jpg" alt="13 dámaso alonso"></div>
+          <div class="meta">
+            <p class="title">13 dámaso alonso</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="14-jose-angel-valente-el-poeta-del-silencio-y-la-palabra.html">
+          <div class="thumb"><img src="14-jose-angel-valente.jpg" alt="14 josé ángel valente"></div>
+          <div class="meta">
+            <p class="title">14 josé ángel valente</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="15-maria-zambrano-la-filosofa-del-sueno-y-la-poesia.html">
+          <div class="thumb"><img src="15-maria-zambrano.jpg" alt="15 maría zambrano"></div>
+          <div class="meta">
+            <p class="title">15 maría zambrano</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="16-gonzalo-torrente-ballester-el-narrador-del-realismo-magico-gallego.html">
+          <div class="thumb"><img src="16-gonzalo-torrente-ballester.jpg" alt="16 gonzalo torrente ballester"></div>
+          <div class="meta">
+            <p class="title">16 gonzalo torrente ballester</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="17-francisco-ayala-el-cronista-de-la-modernidad-y-el-exilio.html">
+          <div class="thumb"><img src="17-francisco-ayala.jpg" alt="17 francisco ayala"></div>
+          <div class="meta">
+            <p class="title">17 francisco ayala</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="18-blas-de-otero-el-poeta-de-la-lucha-y-la-esperanza.html">
+          <div class="thumb"><img src="18-blas-de-otero.jpg" alt="18 blas de otero"></div>
+          <div class="meta">
+            <p class="title">18 blas de otero</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="19-jaime-gil-de-biedma-el-poeta-de-la-intimidad-y-la-desilusion.html">
+          <div class="thumb"><img src="19-jaime-gil-de-biedma.jpg" alt="19 jaime gil de biedma"></div>
+          <div class="meta">
+            <p class="title">19 jaime gil de biedma</p>
+
+          </div>
+        </a>
+      </article>
+<article class="card">
+        <a href="20-manuel-vazquez-montalban-el-cronista-de-barcelona-y-el-detective-del-alma.html">
+          <div class="thumb"><img src="20-manuel-vazquez-montalban.jpg" alt="20 manuel vázquez montalbán"></div>
+          <div class="meta">
+            <p class="title">20 manuel vázquez montalbán</p>
+
+          </div>
+        </a>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
